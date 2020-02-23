@@ -5,14 +5,9 @@
 {% block page_heading %}User Login{% endblock %}
 
 {% block content %}
-{% if user.is_authenticated %}
-<!-- Nothing here because i dont want to see the form when logged in! -->
-{% else %}
 <form action="" method="POST">
     {% csrf_token %}
     {{ login_form }}
     <button type="submit">Login</button>
 </form>
-{% endif %}
-
 {% endblock %}
