@@ -28,7 +28,7 @@ def login(request):
 
         if user:
             auth.login(user=user, request=request)
-            messages.success(request, "You have successfully logged in!")
+            messages.success(request, "You are now logged in!")
         else:
             login_form.add_error(
                 None, "Your username or password is incorrect!")
